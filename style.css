@@ -1,1 +1,175 @@
+:root {
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    border: 0;
+    --maincolor: rgb(08, 196, 161);
+    --maincolordarker: rgb(5, 155, 128);
+    --mainr: 108;
+    --maing: 196;
+    --mainb: 161;
+    --gridcolor: rgb(72, 130, 107);
+    --boxcolor: rgb(7, 154, 127);
+    --accentcolor1: red;
+    --accentcolor2: red;
+    --textcolor: rgb(246, 227, 197);
+    font-family: 'Bakbak One', cursive;
+    font-size: 56px;
 
+
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    border: 0;
+    color: var(--textcolor);
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    border: 0;
+    height: 100vh;
+    
+}
+
+button {
+    height: 50px;
+    width: 100px;
+    font-family: 'Bakbak One', cursive;
+    background-color: var(--maincolor);
+    border: var(--textcolor) solid 0px;
+    border-radius: 15px;
+    /* box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 0.1); */
+    color: var(--textcolor)
+}
+
+#container {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr;
+    height: 100vh;
+    justify-content: center;
+}
+
+.header {
+    background-color: var(--maincolor);
+    /* border: pink solid 2px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    background-color: var(--maincolor);
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+}
+
+.main > * {
+    /* border: pink solid 2px; */
+    
+}
+
+.playframe {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.playframe > * {
+    /* border: rgb(192, 199, 255) solid 2px; */
+    
+}
+
+.sides {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start ;
+    font-size: 30vw;
+    opacity: .25;
+    overflow: hidden;
+    padding-top: 0px;
+}
+
+.sides:hover {
+    opacity: .5;
+}
+
+.arena {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.board {
+    display: grid;
+    height: 400px;
+    width: 400px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    background-color: var(--maincolor);
+    border: var(--maincolordarker) solid 0px;
+    border-radius: 15px;
+    /* overflow: hidden; */
+
+}
+
+.box {
+    background-color: var(--boxcolor);
+    border-radius: 15px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-size: 150px;
+    padding: 0;
+    line-height: 0px;
+    box-shadow: 9px 9px 0px -3px rgba(0,0,0,0.05) inset;
+    transition: .2s;
+}
+
+#a1 {
+    
+    
+}
+.box:hover {
+    background-color: rgb(31, 215, 154);
+    box-shadow: 4px 4px 2px 2px rgba(255, 255, 255, 0.1);
+
+}
+
+.box:active {
+    transform: scale(.95);
+    color: var(--maincolordarker);
+    box-shadow: 1px 2px 0px 9px rgba(0,0,0,0.05) inset;
+
+}
+
+.scoreframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clearbutton {
+    transition: .2s;
+
+}
+
+#clearbutton:hover {
+    background-color: var(--textcolor);
+    color: var(--maincolor)
+}
+
+#clearbutton:active {
+    transform: scale(.95);
+
+    
+}
